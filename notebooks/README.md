@@ -21,17 +21,12 @@ Multiple stacks of such dilated convolutional blocks are applied sequentially, f
 
 ### TCN-para-1
 
-This repository implements a research prototype of a **GP-VAE language model**
-where **temporal structure is carried by a latent Gaussian Process**, not by
-token-level autoregression.
+This repository implements a research prototype of a **GP-VAE language model** where **temporal structure is carried by a latent Gaussian Process**, not by token-level autoregression.
 
-Tokens are decoded **in parallel** using a non-autoregressive factorization
-\(p(x_t \mid z_{1:T})\), while long-range dependencies are modeled in latent space.
+Tokens are decoded **in parallel** with no token-level autoregression; long-range dependencies are instead captured by the latent process.
 
-The latent GP trajectory can be sampled **sequentially** (via Gaussian
-conditioning) or **in parallel** (via a single Cholesky factorization);
-both target the same joint distribution.
 
-The encoder is a **stacked dilated causal TCN** (no pooling or downsampling),
-not a pyramidal architecture.
+The latent GP trajectory can be sampled **sequentially** (via Gaussian conditioning) or **in parallel** (via a single Cholesky factorization); both target the same joint distribution.
+
+The encoder is a **stacked dilated causal TCN** (no pooling or downsampling), not a pyramidal architecture.
 
