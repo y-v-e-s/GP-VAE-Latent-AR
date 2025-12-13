@@ -18,3 +18,20 @@ This implementation uses a **causal dilated Temporal Convolutional Network (TCN)
 The encoder is built as a **causal dilated temporal convolutional network (TCN)**. It consists of stacked residual blocks based on **causal 1D convolutions with increasing dilation factors** (e.g., 1, 2, 4, 8), which progressively enlarge the temporal receptive field while preserving the original sequence length. Causality is enforced through left padding with compensatory cropping, ensuring that each time step only depends on past information.
 
 Multiple stacks of such dilated convolutional blocks are applied sequentially, forming a deep hierarchical composition of temporal features at a fixed temporal resolution. This design allows the model to capture long-range dependencies efficiently while maintaining parallel computation across time steps.
+
+### TCN-para-1
+
+This repository implements a research prototype of a **GP-VAE language model**
+where **temporal structure is carried by a latent Gaussian Process**, not by
+token-level autoregression.
+
+Tokens are decoded **in parallel** using a non-autoregressive factorization
+\(p(x_t \mid z_{1:T})\), while long-range dependencies are modeled in latent space.
+
+The latent GP trajectory can be sampled **sequentially** (via Gaussian
+conditioning) or **in parallel** (via a single Cholesky factorization);
+both target the same joint distribution.
+
+The encoder is a **stacked dilated causal TCN** (no pooling or downsampling),
+not a pyramidal architecture.
+
