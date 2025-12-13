@@ -30,6 +30,7 @@ The latent GP trajectory can be sampled **sequentially** (via Gaussian condition
 The encoder is a **stacked dilated causal TCN** (no pooling or downsampling), not a pyramidal architecture.
 
 ### TCN-para-2
+
 **“Causal dilated convolutional encoder (TCN-style) with GLU gating.”**
 
 The encoder is **TCN-style**.
