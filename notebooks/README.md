@@ -41,4 +41,9 @@ The blocks are repeated several times to increase depth and receptive field, but
 
 Each block uses **GLU gating** and LayerNorm instead of the canonical two-convolution TCN block.
 
+### TCN-para-3
+
+This implementation uses a **causal dilated Temporal Convolutional Network (TCN)** as the encoder. Concretely, it stacks several dilation cycles (e.g., 1–2–4–8) at a fixed sequence length, which increases the receptive field while keeping the temporal resolution unchanged.
+
+In other words, this is a **stacked dilated TCN encoder** (sometimes informally called “pyramidal” due to its growing receptive field), but it does **not** perform explicit multi-scale downsampling (no pooling/stride-based time reduction).
 
