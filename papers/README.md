@@ -1,5 +1,5 @@
 # 2512.09535v1.pdf
-# Latent-Autoregressive GP-VAE Language Model
+## Latent-Autoregressive GP-VAE Language Model
 
 **Yves Ruffenach**  
 Conservatoire National des Arts et Métiers (CNAM), France  
@@ -10,7 +10,7 @@ Conservatoire National des Arts et Métiers (CNAM), France
 
 ---
 
-## Abstract
+### Abstract
 
 We investigate a fully **latent autoregressive** scheme based on a **Gaussian Process (GP)**
 integrated into a **Variational Autoencoder (VAE)**. In this setting, sequential dynamics are
@@ -29,7 +29,7 @@ token-level autoregressive neural operations.
 
 ---
 
-## Keywords
+### Keywords
 
 Gaussian Process VAE; Sequential models; Latent autoregression; Language modeling;  
 Reasoning; Bayesian generative models; Deep learning; Variational autoencoders;  
@@ -37,13 +37,11 @@ Gaussian processes.
 
 ---
 
-## Repository contents
+### Repository contents
 
 This directory contains material related to the **Latent-Autoregressive GP-VAE** model,
 including methodological descriptions, experimental analyses, and associated publications.
 
-- LaTeX sources of the manuscript (when applicable)
-- Figures and tables used in the paper
 - Supplementary material and experimental notes
 
 The focus of this work is **methodological and conceptual**, emphasizing the role of
@@ -53,5 +51,12 @@ latent probabilistic dynamics in language modeling rather than state-of-the-art 
 
 ## Citation
 
-If you use or refer to this work, please cite the associated paper or preprint.
-A machine-readable citation file (`CITATION.cff`) is provided at the root of the repository.
+@article{ruffenach2025latentgpvae,
+  title   = {Latent-Autoregressive GP-VAE Language Model},
+  author  = {Ruffenach, Yves},
+  year    = {2025},
+  institution = {Conservatoire National des Arts et Métiers},
+  note    = {Methodological proof-of-concept study},
+  url     = {https://zenodo.org/records/17696132}
+}
+
