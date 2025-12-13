@@ -25,8 +25,19 @@ This repository implements a research prototype of a **GP-VAE language model** w
 
 Tokens are decoded **in parallel** with no token-level autoregression; long-range dependencies are instead captured by the latent process.
 
-
 The latent GP trajectory can be sampled **sequentially** (via Gaussian conditioning) or **in parallel** (via a single Cholesky factorization); both target the same joint distribution.
 
 The encoder is a **stacked dilated causal TCN** (no pooling or downsampling), not a pyramidal architecture.
+
+### TCN-para-2
+**“Causal dilated convolutional encoder (TCN-style) with GLU gating.”**
+
+The encoder is **TCN-style**.
+
+It uses **causal dilated 1D convolutions** with residual connections and a dilation schedule (1, 2, 4, 8), which is the core principle of Temporal Convolutional Networks (TCNs).
+
+The blocks are repeated several times to increase depth and receptive field, but **there is no temporal downsampling or multi-resolution hierarchy**. Therefore, the encoder is *not pyramidal* in the strict sense.
+
+Each block uses **GLU gating** and LayerNorm instead of the canonical two-convolution TCN block.
+
 
