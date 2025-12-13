@@ -4,8 +4,8 @@
 **Yves Ruffenach**  
 Conservatoire National des Arts et Métiers (CNAM), France  
 
-- Email (institutional): yves.ruffenach.auditeur@lecnam.net  
-- Email (personal): yves@ruffenach.net  
+- Email (institutional): yves.ruffenach.auditeur [at] lecnam [dot] net  
+- Email (personal): yves [at] ruffenach [dot] net 
 - ORCID: https://orcid.org/0009-0009-4737-0555  
 
 ---
