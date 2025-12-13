@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or associated materials, please cite it as below."
+title: "GP-VAE Latent Autoregression"
+type: software
+version: "0.1.0"
+date-released: 2025-01-01
+url: "https://github.com/y-v-e-s"
+
+authors:
+  - family-names: Ruffenach
+    given-names: Yves
+    affiliation: "Conservatoire National des Arts et Métiers, France"
+    orcid: "https://orcid.org/0009-0009-4737-0555"
+
+keywords:
+  - variational autoencoders
+  - gaussian processes
+  - latent autoregression
+  - non-autoregressive language models
+  - continual learning
+  - probabilistic modeling
+  - natural language processing
+
+license: MIT
+
