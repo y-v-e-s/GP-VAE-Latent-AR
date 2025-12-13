@@ -1,3 +1,11 @@
 # Notebooks
 
 Exploratory notebooks for GP-VAE latent autoregression experiments.
+
+### TCN-seq-1
+
+This repository implements a causal dilated TCN encoder (Temporal Convolutional Network). The encoder is built as a stack of causal 1D convolutions with increasing dilation factors (e.g., 1, 2, 4, 8, 16), organized into residual blocks combining normalization, depthwise-separable convolutions, GLU nonlinearities, dropout, Squeeze-and-Excite, and DropPath. Causality is enforced through left padding with compensatory cropping, which strictly prevents any information leakage from future time steps. There is no temporal resolution change throughout the network (no pooling, no stride, no downsampling/upsampling): the sequence length is preserved end-to-end, characterizing a stacked TCN architecture.
+
+### TCN-seq-2
+
+This variant uses a causal dilated Temporal Convolutional Network (TCN) encoder for sequence modeling. The encoder is built as a residual stack of 1D causal convolutions with increasing dilations (e.g., 1, 2, 4, 8, 16), implemented with depthwise-separable convolutions, GLU activations, dropout, Squeeze-and-Excite, and DropPath. Causality is enforced via left padding followed by cropping, preventing any information leakage from future tokens. The temporal resolution is preserved throughout the network (no stride, pooling, or down/up-sampling), so the sequence length remains unchanged end-to-end.
